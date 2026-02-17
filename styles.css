@@ -57,6 +57,23 @@ nav ul li a:hover {
     color: var(--blue);
 }
 
+/* Mobile nav toggle button (hamburger) */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: var(--white);
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-toggle:hover {
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
 .hero {
     background: linear-gradient(135deg, var(--light-gray), #e9eefc);
     text-align: center;
@@ -135,9 +152,28 @@ footer {
         gap: 15px;
     }
 
+    /* Show hamburger on mobile */
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+    }
+
+    /* Collapsible menu behavior */
     nav ul {
         flex-direction: column;
         align-items: center;
+
+        width: 100%;
+        gap: 14px;
+        padding: 10px 0 0;
+
+        display: none; /* collapsed by default */
+    }
+
+    header.nav-open nav ul {
+        display: flex; /* expanded */
     }
 }
 

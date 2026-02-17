@@ -6,6 +6,8 @@
     <title>Sri Lanka Cricket Club</title>
     <link rel="stylesheet" href="styles.css">
 
+    <script src="js/nav.js"></script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,9 +20,14 @@
 
 <header>
     <div class="container logo-section">
-        <img src="imgs/logo.png" alt="Sri Lanka Cricket Club Logo">
+        <img src="logo.png" alt="Sri Lanka Cricket Club Logo" />
+
+        <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+            Menu
+        </button>
+
         <nav>
-            <ul>
+            <ul id="site-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="events.html">Events</a></li>
