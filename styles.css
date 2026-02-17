@@ -137,6 +137,30 @@ nav ul li a:hover {
     color: #444;
 }
 
+/* Responsive embedded iframe (e.g., Google Forms) */
+.iframe-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.embed-iframe {
+    width: 100%;
+    min-height: 1100px; /* adjust if your form is longer/shorter */
+    border: 0;
+    border-radius: 12px;
+    background: var(--white);
+    display: block;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Slightly reduce height on small screens */
+@media (max-width: 768px) {
+    .embed-iframe {
+        min-height: 1200px;
+        border-radius: 10px;
+    }
+}
+
 footer {
     background-color: var(--blue);
     color: var(--white);
